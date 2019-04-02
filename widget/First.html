@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		div {
+			background-color: #f00;
+			height:50px;
+			line-height: 50px;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div onclick="OpenCanner()">
+		Hello APICloud
+	</div>
+
+</body>
+<script type="text/javascript">
+
+  apiready = function() {
+
+  }
+
+  function OpenCanner() {
+    alert("this is div APICloud");
+
+    api.confirm({
+      title: 'ApiCloud确认?',
+      msg: '确认要打开扫描器',
+      buttons: ['确定', '取消']
+      }, function(ret, err) {
+            var index = ret.buttonIndex;
+            if(index == 1) {
+              var scanner = api.require("scanner");
+              scanner.open();
+            }
+            else {
+              //do nothing
+            }
+      });
+  }
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="A6008470794707">
+	<name>FirstHeyApp</name>
+	<content src="./First.html"/>
+	<preference name="windowBackground" value="#FFF" />
+	<preference name="debug" value="false" />
+</widget>
